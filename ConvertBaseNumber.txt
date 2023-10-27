@@ -1,0 +1,15 @@
+Ý tưởng là tao ra 1 chương trình có lựa chọn option trong việc chuyển đổi giữa các base
+Có lẽ sẽ dùng switch case để tạo ra bảng lựa chọn option:
+    Cần liệt kê ra các option cần thiết :
+        1. chuyển 2  sang các mã khác: 8, 10, 16
+        2. chuyển 8  sang các mã khác: 2, 10, 16
+        3. chuyển 10  sang các mã khác: 2, 8, 16 
+        4. chuyển 16  sang các mã khác: 2, 8, 10
+
+có lẽ cần thêm 1 option để quay về manf hình lựa chọn option ban đầu 
+tránh tình trạng chạy đi chạy lại đoạn code gây ức chế ng dùng
+chắc là câu lệnh goto sẽ dùng đc . 
+
+Vấn đề phát sinh làm sao để chuyển dạnh strings sang dạng số, vì nếu để dạng sôs thì int là ko đur để chứa binary code
+
+Lưu ý: có thể dùng array để gộp 3 kí tự kề nhau 
