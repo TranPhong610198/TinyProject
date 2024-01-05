@@ -4,14 +4,14 @@
 #include <stdlib.h>
 int i, j;
 void Base2toOthers(char str[]) {
-    float key10 = 0;
+    unsigned long long key10 = 0;
     int key8, size8, key16, size16, n=strlen(str), str8[100];
     char str16[100];
     // convert to Base 10
     for(i=0; i<n; i++){
         key10 = key10 + (str[i]-48)*pow(2,n-1-i);
     }
-    printf("Base 10: %.0f\n", key10);
+    printf("Base 10: %llu\n", key10);
 
     // convert to Base 8
     if(n%3 == 0)
@@ -69,7 +69,7 @@ void Base2toOthers(char str[]) {
 }
 
 void Base8toOthers(char str[]) {
-    float key10 = 0;
+    unsigned long long key10 = 0;
     int key2, key16, n=strlen(str), str2[100];
     char str16[100];
 
@@ -77,7 +77,7 @@ void Base8toOthers(char str[]) {
     for(i=0; i<n; i++){
         key10 += (str[i]-48)*pow(8,n-1-i);
     }
-    printf("Base 10: %.0f\n", key10);
+    printf("Base 10: %llu\n", key10);
 
     //convert to base 2
 //Way1: convert from base 8
@@ -133,7 +133,7 @@ void Base8toOthers(char str[]) {
 }
 
 void Base10toOthers(char str[]) {
-    int key10;
+    unsigned long long key10;
     int key2, key8, key16, n=strlen(str), str8[100], str2[100];
     char str16[100];
 
@@ -195,7 +195,7 @@ void Base10toOthers(char str[]) {
 }
 
 void Base16toOthers(char str[]) {
-    int key10 = 0;
+    unsigned long long key10 = 0;
     int key2, key8, n=strlen(str), str8[100], str2[100];
     
     //convert to Base 10
@@ -205,7 +205,7 @@ void Base16toOthers(char str[]) {
         else if (str[i]>=48 && str[i]<=57)
             key10 = key10 + (str[i]-48)*pow(16,n-1-i);
     }
-    printf("Base 10: %d\n", key10);
+    printf("Base 10: %llu\n", key10);
 
     //convert to Base 8 from Base 10 
     j=0;
@@ -244,7 +244,8 @@ void Base16toOthers(char str[]) {
 int main(){
     int choose;
     char a[1000]; 
-    back:printf("1. Convert from Base 2 to Others Base.\n");
+    back:system("cls") ;
+	printf("1. Convert from Base 2 to Others Base.\n");
     printf("2. Convert from Base 8 to Others Base.\n");
     printf("3. Convert from Base 10 to Others Base.\n");
     printf("4. Convert from Base 16 to Others Base.\n");
